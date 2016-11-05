@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hello Facebook</title>
+</head>
+<body>
+<h3>Hello, <span th:text="${facebookProfile.getFirstName()}">Some User</span>!</h3>
+
+<h4>Here is your feed:</h4>
+
+<div th:each="friend:${friends}">
+    <b th:text="${friend.getFirstName()}">Name</b> <b th:text="${friend.getLastName()}">Surname</b>
+    <hr/>
+</div>
+</body>
+</html>
