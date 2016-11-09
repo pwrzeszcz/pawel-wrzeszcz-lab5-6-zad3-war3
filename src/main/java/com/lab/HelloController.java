@@ -34,7 +34,6 @@ public class HelloController {
 
         model.addAttribute("facebookProfile", userProfile);
         PagedList<User> friends = facebook.friendOperations().getFriendProfiles();
-        System.out.println("Ilość: " + friends.size());
         model.addAttribute("friends", friends);
 
         return "friends";
